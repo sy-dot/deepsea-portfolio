@@ -1,0 +1,106 @@
+$sidebar-width: 240px;
+
+.navbar {
+  background-color: $first-color;
+  border-bottom: 1px solid $accent-color;
+
+  &-toggler {
+    color: $accent-color;
+
+    &:focus {
+      box-shadow: none;
+      border: 1px solid $accent-color;
+    }
+  }
+
+  @media (min-width: 992px) {
+    min-height: 100vh;
+    width: $sidebar-width;
+    background: linear-gradient(rgba($first-color, .9), rgba($second-color, .9)), url('../../assets/img/sidebar.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: none;
+
+    &-brand {
+      padding: 15px;
+
+      &-img-back {
+        position: relative;
+        display: inline-block;
+        background-color: inherit;
+
+        &::after {
+          content: '';
+          position: absolute;
+          z-index: -1;
+          top: -.125em;
+          left: -.125em;
+          width: calc(100% + .25em);
+          height: calc(100% + .25em);
+          border-radius: 50%;
+          background-image: linear-gradient(90deg, rgba($accent-color, 1), rgba($accent-color-2, .5), rgba($first-color, .9), rgba($accent-color, 1));
+          background-size: 200%;
+          animation: animateborder 8s ease infinite;
+
+          @keyframes animateborder {
+            from {
+              transform: rotate(0deg);
+            }
+
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        }
+
+        // & img {
+        //   width: 100%;
+        //   max-width: 170px;
+        //   min-width: 170px;
+
+        //   height: auto;
+        //   max-height: 170px;
+        //   min-height: 170px;
+
+        //   object-fit: cover;
+        // }
+      }
+    }
+
+    // &-brand img {
+    //   border: 8px solid $accent-color;
+    // }
+  }
+
+  & .nav-link {
+    font-weight: bold;
+    // text-transform: uppercase;
+    color: $white-color;
+
+    &:hover {
+      color: $accent-color;
+
+      & i {
+        border: 2px solid $accent-color;
+      }
+    }
+
+    &.active {
+      color: $accent-color;
+
+      & i {
+        border: 2px solid $accent-color;
+      }
+    }
+
+    & i {
+      margin-right: 10px;
+      font-size: 15px;
+      background: $first-color;
+      padding: 5px;
+      border: 2px solid transparent;
+      border-radius: 100px;
+      transition: all .2s ease;
+    }
+  }
+}

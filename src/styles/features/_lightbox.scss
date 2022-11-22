@@ -1,0 +1,72 @@
+//// WORK (Project's) ////
+.lightbox-img {
+  & a img {
+    pointer-events: auto;
+  }
+}
+
+/// //WORK (Project's) ////
+
+.fancybox-inner {
+
+  & .fancybox-button {
+    background: transparent;
+  }
+
+  & .fancybox-toolbar {
+    & .fancybox-button {
+      color: $accent-color;
+      transition: all .2s ease;
+
+      &:hover {
+        color: $accent-color-2;
+      }
+
+      & svg:hover {
+        filter: contrast(1.5);
+      }
+    }
+  }
+
+  & .fancybox-navigation {
+    & .fancybox-button {
+      color: $accent-color;
+      transition: all .2s ease;
+
+      &[disabled],
+      &[disabled]:hover {
+        color: #888;
+      }
+    }
+
+    &:hover {
+      color: $accent-color-2;
+    }
+
+    & svg:hover {
+      filter: contrast(1.5);
+    }
+  }
+
+  .fancybox-caption {
+    background: linear-gradient(0deg, rgba($second-color, .25), 25%, transparent);
+
+    &__body {
+      font-family: $main-font-mono;
+      font-weight: bold;
+      color: $accent-color;
+    }
+  }
+}
+
+.fancybox-thumbs {
+  background: transparent;
+
+  &__list {
+    background: $second-color;
+
+    & a::before {
+      border: 2px solid $accent-color;
+    }
+  }
+}

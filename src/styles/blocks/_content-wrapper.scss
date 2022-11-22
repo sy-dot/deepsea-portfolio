@@ -1,0 +1,160 @@
+//// CONTENT WRAPPER ////
+.content-wrapper {
+  @media (min-width: 992px) {
+    padding-left: $sidebar-width;
+  }
+}
+//// //CONTENT WRAPPER ////
+
+
+//// HOME ////
+.home {
+  & .custom-lnk {
+    @media (max-width: 402px) {
+      display: none;
+    }
+  }
+}
+//// //HOME ////
+
+
+//// CUSTOM EL ////
+
+// LINK
+.custom-lnk {
+  font-family: $main-font-mono;
+  font-weight: bold;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: $accent-color;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: .2s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.bg-base {
+  background-color: $first-color;
+}
+
+.bg-accent {
+  background-color: $accent-color;
+}
+
+.shadow-effect {
+  transition: .5s;
+
+  &:hover {
+    box-shadow: -6px 6px 0 0 $accent-color;
+  }
+}
+
+
+// CARD
+.custom-card {
+  &-img {
+    overflow: hidden;
+
+    & img {
+      transition: .4s ease;
+    }
+  }
+
+  &:hover .custom-card-img img {
+    transform: scale(1.1);
+    // filter: contrast(1.5);
+    // filter: saturate(2);
+  }
+}
+
+//// //CUSTOM EL ////
+
+
+//// SKILLBAR ////
+.skills-progress {
+  height: 50px;
+  display: block;
+  background: none;
+  font-family: $main-font-mono;
+
+  & .skill {
+    padding: 10px 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    color: $accent-color;
+
+    & .val {
+      float: right;
+      font-style: normal;
+    }
+  }
+
+  &-bar-wrap {
+    background: $second-color;
+  }
+
+  &-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: $accent-color;
+  }
+}
+//// //SKILLBAR ////
+
+
+//// OTHER ////
+.full-height {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid rgba($color: #fff, $alpha: .1);
+}
+
+.btn {
+  padding: 12px 28px;
+  font-weight: 700;
+
+  &-brand {
+    background-color: $accent-color !important;
+    color: $first-color !important;
+    border-color: $accent-color !important;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color-2 !important;
+      border-color: $accent-color-2 !important;
+    }
+  }
+}
+
+.iconbox {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  background-color: $accent-color;
+  color: $first-color;
+
+  & .las {
+    font-size: 32px;
+  }
+}
+//// //OTHER ////

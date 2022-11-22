@@ -1,0 +1,28 @@
+body {
+  &::-webkit-scrollbar {
+    width: 1em;
+
+    &-track {
+      background: $first-color;
+      border-radius: 100px;
+      margin-block: .5em;
+    }
+
+    &-thumb {
+      background: $accent-color;
+      border: .25em solid $first-color;
+      border-radius: 100px;
+
+      &:hover {
+        background: $accent-color-2;
+      }
+    }
+  }
+}
+
+@supports (scrollbar-color: $accent-color $first-color) {
+  * {
+    scrollbar-color: $accent-color $first-color;
+    scrollbar-width: thin;
+  }
+}

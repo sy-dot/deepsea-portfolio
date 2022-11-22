@@ -1,0 +1,49 @@
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $second-color;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+
+  // &_hide {
+  //   display: none;
+  //   z-index: -9999;
+  // }
+
+  &_loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: $first-color;
+  }
+
+  &_count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 18vw;
+    color: $text-color;
+    font-weight: 800;
+    mix-blend-mode: difference;
+  }
+}
+
+@keyframes preloader_fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

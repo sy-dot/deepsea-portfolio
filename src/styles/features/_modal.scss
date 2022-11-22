@@ -1,0 +1,66 @@
+.hystmodal {
+  &--active {
+    z-index: 1035;
+  }
+
+  &__window {
+    background: $first-color;
+    border: 1px solid $accent-color;
+
+    // & h1, & h2, & h3, & h4, & h5, & h6 {
+    //   color: $text-color;
+    // } 
+
+    & .hystmodal__close {
+      background: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      & i {
+        font-size: 30px;
+        color: $accent-color;
+        transition: all .2s ease;
+
+        &:hover {
+          filter: contrast(1.5);
+        }
+      }
+    }
+  }
+
+  & .width {
+    &-650 {
+      width: 650px;
+    }
+
+    &-700 {
+      width: 700px;
+    }
+
+    &-750 {
+      width: 750px;
+    }
+
+    &-800 {
+      width: 800px;
+    }
+
+    &-850 {
+      width: 850px;
+    }
+
+    &-900 {
+      width: 900px;
+    }
+
+    &-950 {
+      width: 950px;
+    }
+
+    &-1k {
+      width: 1000px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+$main-color: #1c1c1c;
+$first-color: #033f47;
+$second-color: #022a30;
+$background-color: #022a30;
+$text-color: #b6cbce;
+$heading-color: #eef3db;
+$accent-color: #e0f780;
+$accent-color-2: #deff58;
+$link-hover-color: #dbdbdb;
+$white-color: #fff;
+$black-color: #000;
+
+.main-color {
+  color: $main-color;
+}
+
+.first-color {
+  color: $first-color;
+}
+
+.secong-color {
+  color: $second-color;
+}
+
+.background-color {
+  color: $background-color;
+}
+
+.text-color {
+  color: $text-color;
+}
+
+.accent-color {
+  color: $accent-color;
+}
+
+.accent-color-2 {
+  color: $accent-color-2;
+}
+
+.white-color {
+  color: $white-color;
+}
+
+.black-color {
+  color: $black-color;
+}

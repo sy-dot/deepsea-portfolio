@@ -1,0 +1,99 @@
+////// INIT //////
+
+//// RESET STYLE's ////
+@import 'reset.min';
+
+//// MIXIN's ////
+@import 'mixins/colors';
+@import 'mixins/fonts';
+
+//// MAIN STYLE's ////
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: visible;
+  font-family: $main-font;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// #site-background {
+//   position: fixed;
+//   width: 100vw;
+//   height: 100vh;
+//   background: linear-gradient(rgba(black, .5), rgba(black, .5)), url('');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   z-index: -9999;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-weight: 700;
+}
+
+img {
+  pointer-events: none;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .2s ease;
+
+  &:hover,
+  &:visited {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  &:hover,
+  h4:hover {
+    color: $accent-color;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+hr {
+  // color: rgba(255, 255, 255, .2);
+  // color: red;
+  // background-color: rgba(255, 255, 255, .2);
+  background-color: rgba($color: $accent-color, $alpha: 1);
+  border: none;
+  // border: 2px solid transparent;
+  height: 2px;
+  clear: both;
+}
+
+::selection {
+  background: rgba($color: #000000, $alpha: .3);
+  color: $accent-color;
+}
+
+
+//// BLOCK's ////
+@import 'blocks/navbar';
+@import 'blocks/content-wrapper';
+@import 'blocks/contact-form';
+@import 'blocks/footer';
+
+//// FEATURE's ////
+@import 'features/preloader';
+@import 'features/typing-text';
+// @import 'features/noise';
+@import 'features/scrollbar';
+@import 'features/lightbox';
+@import 'features/modal';

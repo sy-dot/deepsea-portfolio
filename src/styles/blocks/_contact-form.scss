@@ -1,0 +1,27 @@
+.contact {
+  & .form-control {
+    background: $first-color;
+    border-color: $first-color;
+    color: $text-color;
+
+    &:focus {
+      border-color: $accent-color;
+      box-shadow: none;
+    }
+
+    &::placeholder {
+      color: $text-color;
+    }
+  }
+
+  & input.form-control {
+    height: 44px;
+  }
+
+  & .succes-error-msg {
+    background: $accent-color;
+    color: $first-color;
+    font-weight: bold;
+    font-family: $main-font-mono;
+  }
+}

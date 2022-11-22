@@ -1,0 +1,10 @@
+.typed-cursor {
+  color: $accent-color;
+}
+
+.typed {
+  &--underline {
+    padding-bottom: 4px;
+    border-bottom: 3px solid $accent-color;
+  }
+}
