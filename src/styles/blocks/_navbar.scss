@@ -53,17 +53,17 @@ $sidebar-width: 240px;
           }
         }
 
-        // & img {
-        //   width: 100%;
-        //   max-width: 170px;
-        //   min-width: 170px;
+        & img {
+          width: 100%;
+          max-width: 170px;
+          min-width: 170px;
 
-        //   height: auto;
-        //   max-height: 170px;
-        //   min-height: 170px;
+          height: auto;
+          max-height: 170px;
+          min-height: 170px;
 
-        //   object-fit: cover;
-        // }
+          object-fit: cover;
+        }
       }
     }
 
@@ -80,7 +80,7 @@ $sidebar-width: 240px;
     &:hover {
       color: $accent-color;
 
-      & i {
+      & .nav-item-icon {
         border: 2px solid $accent-color;
       }
     }
@@ -88,19 +88,28 @@ $sidebar-width: 240px;
     &.active {
       color: $accent-color;
 
-      & i {
+      & .nav-item-icon {
         border: 2px solid $accent-color;
       }
     }
 
-    & i {
-      margin-right: 10px;
-      font-size: 15px;
+    & .nav-item-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
       background: $first-color;
-      padding: 5px;
+      padding: 15px;
       border: 2px solid transparent;
       border-radius: 100px;
       transition: all .2s ease;
+
+      & i {
+        font-size: 15px;
+      }
     }
   }
 }
