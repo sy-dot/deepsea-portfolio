@@ -37,9 +37,9 @@ $Subject = $ssubject . " - " . "<" . $httphost . ">";
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Имя: ";
 $Body .= $name . "\n";
-$Body .= "Subject: ";
+$Body .= "Тема: ";
 $Body .= $ssubject . "\n\n";
 // $Body .= "Email: ";
 // $Body .= $email . "\n";
@@ -47,8 +47,13 @@ $Body .= $ssubject . "\n\n";
 $Body .= $message;
 $Body .= "\n";
 
+$headers   = [
+  'From' => $email,
+  'Content-type' => 'text/plain; charset=UTF-8',
+];
+
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:" . $email);
+$success = mail($EmailTo, $Subject, $Body, $headers);
 
 
 
