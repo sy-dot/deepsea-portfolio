@@ -15,6 +15,21 @@ Designed by **[SA7MAN](https://www.youtube.com/@SA7MAN)** | Enhanced by **crytek
 
 * * *
 
+In some cases, the unique position of elements (mostly masonry) is not compatible with AOS, on screens <=992px, for this use:
+
+```javascript
+AOS.init({  
+  disable: function() {
+    var maxWidth = 992;
+    return window.innerWidth < maxWidth;
+  }
+});
+```
+
+This will disable animations on screens smaller than 992px.
+
+* * *
+
 **[Source repo](https://github.com/SA7MAN/joncarter)**
 
 **For more information check this [video](https://youtu.be/3e8p0R5-b5A)**
