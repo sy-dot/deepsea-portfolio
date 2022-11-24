@@ -36,3 +36,15 @@ $('.navbar-toggler').click(function () {
     $(this).data('status', false);
   }
 })
+
+
+//// MASONRY ////
+$('.masonry').each(function () {
+  var $module = $(this);
+  var update = function () {
+    $module.masonry('layout');
+  };
+
+  this.addEventListener('load', update, true);
+  $module.masonry();
+});
