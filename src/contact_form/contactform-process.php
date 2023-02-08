@@ -37,9 +37,9 @@ $Subject = $ssubject . " - " . "<" . $httphost . ">";
 
 // prepare email body text
 $Body = "";
-$Body .= "Имя: ";
+$Body .= "Name: ";
 $Body .= $name . "\n";
-$Body .= "Тема: ";
+$Body .= "Subject: ";
 $Body .= $ssubject . "\n\n";
 // $Body .= "Email: ";
 // $Body .= $email . "\n";
